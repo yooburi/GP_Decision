@@ -67,7 +67,7 @@ class MissionSupervisorNode(Node):
             'mission_marker_topic', '/mission_state_marker'
         ).value
         self.mission_marker_frame_id = self.declare_parameter(
-            'mission_marker_frame_id', 'vehicle_ref'
+            'mission_marker_frame_id', 'leader/base_link'
         ).value
         self.mission_marker_text_z_m = float(
             self.declare_parameter('mission_marker_text_z_m', 2.1).value
@@ -84,7 +84,7 @@ class MissionSupervisorNode(Node):
             'safety_marker_topic', '/safety_preemption_markers'
         ).value
         self.safety_marker_frame_id = self.declare_parameter(
-            'safety_marker_frame_id', 'vehicle_ref'
+            'safety_marker_frame_id', 'leader/base_link'
         ).value
         self.safety_marker_radius_m = max(
             float(

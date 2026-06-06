@@ -13,7 +13,7 @@ mission_supervisor_node:
     safety_status_topic: "/safety_status"
     safety_active_topic: "/safety_active"
     mission_marker_topic: "/mission_state_marker"
-    mission_marker_frame_id: "vehicle_ref"
+    mission_marker_frame_id: "leader/base_link"
     mission_marker_text_z_m: 2.1
     mission_marker_text_scale: 0.42
     safety_marker_topic: "/safety_preemption_markers"

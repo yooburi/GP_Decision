@@ -59,7 +59,7 @@ Visualization Manager:
         Z: 0
       Plane: XY
       Plane Cell Count: 80
-      Reference Frame: vehicle_ref
+      Reference Frame: leader/base_link
       Value: false
     - Class: rviz_default_plugins/TF
       Enabled: true
@@ -116,7 +116,7 @@ Visualization Manager:
       Enabled: true
       Name: Mission State
       Namespaces:
-        {}
+        mission_state_text: true
       Topic:
         Depth: 5
         Durability Policy: Transient Local
@@ -144,8 +144,10 @@ Visualization Manager:
       Namespaces:
         complex_start_area: true
         complex_start_label: true
+        complex_start_range: true
         highway_resume_area: true
         highway_resume_label: true
+        highway_resume_range: true
       Topic:
         Depth: 5
         Durability Policy: Transient Local
@@ -373,7 +375,7 @@ Visualization Manager:
       Name: Current View
       Near Clip Distance: 0.009999999776482582
       Pitch: 1.5697963237762451
-      Target Frame: vehicle_ref
+      Target Frame: leader/base_link
       Value: ThirdPersonFollower (rviz_default_plugins)
       Yaw: 3.107372283935547
     Saved: ~
