@@ -17,7 +17,7 @@ mission_supervisor_node:
     mission_marker_text_z_m: 2.1
     mission_marker_text_scale: 0.42
     safety_marker_topic: "/safety_preemption_markers"
-    safety_marker_frame_id: "vehicle_ref"
+    safety_marker_frame_id: "leader/base_link"
     safety_marker_radius_m: 2.4
     safety_marker_height_m: 0.18
     safety_marker_text_z_m: 1.4

@@ -5,7 +5,7 @@ mission_zone_node:
     status_topic: "/mission_zone_status"
     marker_topic: "/mission_zones"
     csv_file_path: ""
-    csv_frame_id: "vehicle_ref"
+    csv_frame_id: "leader/base_link"
     marker_publish_rate_hz: 2.0
     context_latch_duration_sec: 2.0
 

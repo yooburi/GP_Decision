@@ -66,9 +66,9 @@ Visualization Manager:
       Frame Timeout: 15
       Frames:
         All Enabled: true
-        csv:
+        leader/base_link:
           Value: true
-        vehicle_ref:
+        map:
           Value: true
         velodyne:
           Value: true
@@ -78,8 +78,8 @@ Visualization Manager:
       Show Axes: true
       Show Names: true
       Tree:
-        csv:
-          vehicle_ref:
+        map:
+          leader/base_link:
             velodyne:
               {}
       Update Interval: 0
@@ -116,10 +116,11 @@ Visualization Manager:
       Enabled: true
       Name: Mission State
       Namespaces:
-        mission_state_text: true
+        {}
       Topic:
         Depth: 5
         Durability Policy: Transient Local
+        Filter size: 10
         History Policy: Keep Last
         Reliability Policy: Reliable
         Value: /mission_state_marker
@@ -184,7 +185,7 @@ Visualization Manager:
       Enabled: true
       Name: RRT Target
       Namespaces:
-        {}
+        complex_rrt_target: true
       Topic:
         Depth: 5
         Durability Policy: Transient Local
@@ -210,7 +211,7 @@ Visualization Manager:
       Enabled: true
       Name: RRT Inflated Obstacles
       Namespaces:
-        {}
+        complex_rrt_obstacles: true
       Topic:
         Depth: 10
         Durability Policy: Volatile
@@ -234,7 +235,7 @@ Visualization Manager:
       Enabled: true
       Name: RRT Best Branch
       Namespaces:
-        {}
+        complex_rrt_best_branch: true
       Topic:
         Depth: 10
         Durability Policy: Volatile
@@ -313,7 +314,7 @@ Visualization Manager:
   Enabled: true
   Global Options:
     Background Color: 24; 28; 36
-    Fixed Frame: vehicle_ref
+    Fixed Frame: leader/base_link
     Frame Rate: 30
   Name: root
   Tools:
@@ -356,7 +357,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/ThirdPersonFollower
-      Distance: 55.676910400390625
+      Distance: 25.279483795166016
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -382,7 +383,7 @@ Window Geometry:
   Height: 1016
   Hide Left Dock: false
   Hide Right Dock: true
-  QMainWindow State: 000000ff00000000fd0000000100000000000002fb0000039efc0200000005fb000000100044006900730070006c006100790073010000003d000001f5000000c900fffffffb0000001200530065006c0065006300740069006f006e00000001860000009c0000005c00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007300000001cc000000bf0000005c00fffffffb0000000a00560069006500770073010000023800000145000000a400fffffffb0000000800540069006d00650100000383000000580000003900ffffff000004390000039e00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd0000000100000000000002fb0000039efc0200000005fb000000100044006900730070006c006100790073010000003d000001f5000000c900fffffffb0000001200530065006c0065006300740069006f006e00000001860000009c0000005c00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007300000001cc000000bf0000005c00fffffffb0000000a00560069006500770073010000023800000145000000a400fffffffb0000000800540069006d00650100000383000000580000003900ffffff000004320000039e00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Selection:
     collapsed: false
   Time:
@@ -391,6 +392,6 @@ Window Geometry:
     collapsed: false
   Views:
     collapsed: false
-  Width: 1850
-  X: 70
+  Width: 1843
+  X: 77
   Y: 27
